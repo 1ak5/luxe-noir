@@ -900,29 +900,32 @@
     position: relative;
     margin-bottom: 0.3rem;
     text-align: left;
-    color: #000000;
-    background: none;
-    -webkit-text-fill-color: #000000;
-    animation: titleReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s backwards;
-    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #ffd700 50%, #ffed4e 70%, #ffffff 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s backwards, gradientShift 4s ease-in-out infinite;
+    filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
   }
 
   body.light-mode .hero-title .word {
-    color: #000000;
-    background: none;
-    -webkit-text-fill-color: #000000;
-    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #ffd700 50%, #ffed4e 70%, #ffffff 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s backwards, gradientShift 4s ease-in-out infinite;
+    filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
   }
   
   @supports not (-webkit-background-clip: text) {
     .hero-title .word {
-      color: #000000;
+      color: #ffd700;
       background: none;
-      -webkit-text-fill-color: #000000;
-      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+      -webkit-text-fill-color: #ffd700;
+      filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+      animation: titleReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s backwards, gradientShift 4s ease-in-out infinite;
     }
   }
   
@@ -952,6 +955,18 @@
       opacity: 1;
       transform: translateY(0) scale(1);
       filter: blur(0);
+    }
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
   }
   
@@ -1155,6 +1170,11 @@
     padding: 1.5rem;
     font-weight: 600;
     color: var(--accent);
+  }
+  
+  .price-tag,
+  .premium-tag {
+    color: #000000 !important;
   }
   
   .float-card.card-1 {
@@ -2721,30 +2741,33 @@
       line-height: 1.05;
       text-align: center;
       width: 100%;
-      color: #000000;
-      background: none;
-      -webkit-text-fill-color: #000000;
-      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-      animation: titleReveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards;
+      background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #ffd700 50%, #ffed4e 70%, #ffffff 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+      animation: titleReveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards, gradientShift 4s ease-in-out infinite;
       position: relative;
     }
     @supports not (-webkit-background-clip: text) {
       .hero-title .word {
-        color: #000000;
+        color: #ffd700;
         background: none;
-        -webkit-text-fill-color: #000000;
-        filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+        -webkit-text-fill-color: #ffd700;
+        filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+        animation: titleReveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards, gradientShift 4s ease-in-out infinite;
       }
     }
 
     body.light-mode .hero-title .word {
-      color: #000000;
-      background: none;
-      -webkit-text-fill-color: #000000;
-      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+      background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #ffd700 50%, #ffed4e 70%, #ffffff 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+      animation: titleReveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards, gradientShift 4s ease-in-out infinite;
     }
     .hero-title .word:nth-child(1) {
       animation-delay: 0.1s;
@@ -2942,30 +2965,33 @@
       line-height: 1.05;
       text-align: center;
       width: 100%;
-      color: #000000;
-      background: none;
-      -webkit-text-fill-color: #000000;
-      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-      animation: titleReveal 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards;
+      background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #ffd700 50%, #ffed4e 70%, #ffffff 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+      animation: titleReveal 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards, gradientShift 4s ease-in-out infinite;
       position: relative;
     }
     @supports not (-webkit-background-clip: text) {
       .hero-title .word {
-        color: #000000;
+        color: #ffd700;
         background: none;
-        -webkit-text-fill-color: #000000;
-        filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+        -webkit-text-fill-color: #ffd700;
+        filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+        animation: titleReveal 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards, gradientShift 4s ease-in-out infinite;
       }
     }
 
     body.light-mode .hero-title .word {
-      color: #000000;
-      background: none;
-      -webkit-text-fill-color: #000000;
-      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+      background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #ffd700 50%, #ffed4e 70%, #ffffff 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+      animation: titleReveal 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards, gradientShift 4s ease-in-out infinite;
     }
     .hero-title .word:nth-child(1) {
       animation-delay: 0.1s;
@@ -3218,28 +3244,32 @@
       display: block !important;
       font-size: 3.2rem;
       margin-bottom: 0.5rem;
-      color: #000000;
-      background: none;
-      -webkit-text-fill-color: #000000;
-      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+      background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #ffd700 50%, #ffed4e 70%, #ffffff 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+      animation: titleReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s backwards, gradientShift 4s ease-in-out infinite;
     }
     @supports not (-webkit-background-clip: text) {
       .hero-title .word {
-        color: #000000;
+        color: #ffd700;
         background: none;
-        -webkit-text-fill-color: #000000;
-        filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+        -webkit-text-fill-color: #ffd700;
+        filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+        animation: titleReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s backwards, gradientShift 4s ease-in-out infinite;
       }
     }
 
     body.light-mode .hero-title .word {
-      color: #000000;
-      background: none;
-      -webkit-text-fill-color: #000000;
-      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+      background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #ffd700 50%, #ffed4e 70%, #ffffff 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+      animation: titleReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s backwards, gradientShift 4s ease-in-out infinite;
     }
     .hero-title .word:nth-child(1),
     .hero-title .word:nth-child(2),
